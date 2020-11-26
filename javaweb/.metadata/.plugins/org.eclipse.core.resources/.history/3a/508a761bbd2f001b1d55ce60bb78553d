@@ -1,0 +1,20 @@
+package com.lmonkey.dao;
+
+public class Basedao {
+	static {
+		//加载驱动
+		Class.forName("com.mysql.cj.jdbc.Driver");
+	}
+	
+	public Connection getconn(){
+		
+	}
+	
+	public int exectuIUD(){
+		
+	}
+	
+	public void closeall(){
+		
+	}
+}

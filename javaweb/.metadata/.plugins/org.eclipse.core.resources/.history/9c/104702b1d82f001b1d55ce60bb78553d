@@ -1,0 +1,19 @@
+package com.lmonkey.service;
+
+import com.lmonkey.dao.Basedao;
+import com.lmonkey.entity.LMONKEY_USER;
+
+public class LMONKEY_USERDao {
+	public static int insert(LMONKEY_USER u){
+		String sql = "insert into LMONKEY_USER values(?, ?, ?, ?, DATE_FORMAT(?,'%Y-%m-%d'), ?, ?, ?, ?, ?)";
+		
+		Object[] params = {
+				u.getUSER_ID(),
+				u.getUSER_NAME(),
+				u.getUSER_PASSWORD(),
+				
+		};
+		
+		Basedao.exectuIUD(sql, params);
+	}
+}

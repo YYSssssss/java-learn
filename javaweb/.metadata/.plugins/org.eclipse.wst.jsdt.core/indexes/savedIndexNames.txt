@@ -1,0 +1,12 @@
+INDEX VERSION 1.3+F:\exercise java\java-learn\javaweb\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1618847684.index
+2742143408.index
+757364813.index
+4208699077.index
+261167552.index
+1861109161.index
+865804530.index
+655248533.index
+1128232829.index
+94851132.index
+1412480512.index

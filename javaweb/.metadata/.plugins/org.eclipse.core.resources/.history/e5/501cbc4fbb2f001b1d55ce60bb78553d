@@ -1,0 +1,19 @@
+package com.lmonkey.dao;
+
+public class Basedao {
+	static {
+		//加载驱动
+	}
+	
+	public Connection getconn(){
+		
+	}
+	
+	public int exectuIUD(){
+		
+	}
+	
+	public void closeall(){
+		
+	}
+}

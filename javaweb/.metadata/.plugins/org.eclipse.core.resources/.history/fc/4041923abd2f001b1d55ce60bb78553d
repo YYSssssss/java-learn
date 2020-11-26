@@ -1,0 +1,26 @@
+package com.lmonkey.dao;
+
+public class Basedao {
+	static {
+		//加载驱动
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public static Connection getconn(){
+		//建立一个连接对象
+		
+	}
+	
+	public int exectuIUD(){
+		
+	}
+	
+	public void closeall(){
+		
+	}
+}

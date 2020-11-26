@@ -1,0 +1,17 @@
+package com.lmonkey.dao;
+
+public class Basedao {
+
+	
+	public Connection getconn(){
+		
+	}
+	
+	public int exectuIUD(){
+		
+	}
+	
+	public void closeall(){
+		
+	}
+}

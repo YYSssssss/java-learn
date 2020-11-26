@@ -1,0 +1,10 @@
+package com.lmonkey.service;
+
+import com.lmonkey.entity.LMONKEY_USER;
+
+public class LMONKEY_USERDao {
+	public static int insert(LMONKEY_USER u){
+		String sql = "insert into LMONKEY_USER values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+		
+	}
+}
