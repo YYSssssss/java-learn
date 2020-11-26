@@ -1,0 +1,32 @@
+package com.lmonkey.service;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.lmonkey.entity.LMONKEY_USER;
+
+/**
+ * Servlet implementation class DoUserSelect
+ */
+@WebServlet("/manage/admin_DoUserSelect")
+public class DoUserSelect extends HttpServlet {
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
+	 	ArrayList<LMONKEY_USER> list = LMONKEY_USERDao.selectAll();
+	 	
+	 	//放到请求对象里
+	 	
+	}
+
+}

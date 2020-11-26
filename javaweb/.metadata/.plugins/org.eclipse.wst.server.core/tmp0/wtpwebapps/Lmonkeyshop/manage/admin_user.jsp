@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="admin_menu.jsp" %>>
+    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  
+<%@ include file="admin_menu.jsp" %>
     <!--/sidebar-->
     <div class="main-wrap">
 
@@ -40,54 +42,31 @@
                     <table class="result-tab" width="100%">
                         <tr>
                             <th class="tc" width="5%"><input class="allChoose" name="" type="checkbox"></th>
-                            <th>排序</th>
                             <th>ID</th>
-                            <th>标题</th>
-                            <th>审核状态</th>
-                            <th>点击</th>
-                            <th>发布人</th>
-                            <th>更新时间</th>
-                            <th>评论</th>
+                            <th>姓名</th>
+                            <th>性别</th>
+                            <th>EMAIL</th>
+                            <th>手机</th>
                             <th>操作</th>
                         </tr>
-                        <tr>
-                            <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
-                            <td>
-                                <input name="ids[]" value="59" type="hidden">
-                                <input class="common-input sort-input" name="ord[]" value="0" type="text">
-                            </td>
-                            <td>59</td>
-                            <td title="发哥经典"><a target="_blank" href="#" title="发哥经典">发哥经典</a> …
-                            </td>
-                            <td>0</td>
-                            <td>2</td>
-                            <td>admin</td>
-                            <td>2014-03-15 21:11:01</td>
-                            <td></td>
-                            <td>
-                                <a class="link-update" href="#">修改</a>
-                                <a class="link-del" href="#">删除</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tc"><input name="id[]" value="58" type="checkbox"></td>
-                            <td>
-                                <input name="ids[]" value="58" type="hidden">
-                                <input class="common-input sort-input" name="ord[]" value="0" type="text">
-                            </td>
-                            <td>58</td>
-                            <td title="黑色经典"><a target="_blank" href="#" title="黑色经典">黑色经典</a> …
-                            </td>
-                            <td>0</td>
-                            <td>35</td>
-                            <td>admin</td>
-                            <td>2013-12-30 22:34:00</td>
-                            <td></td>
-                            <td>
-                                <a class="link-update" href="#">修改</a>
-                                <a class="link-del" href="#">删除</a>
-                            </td>
-                        </tr>
+                        
+                        <c:forEach var="u" items="${userlist}" >
+	                        <tr>
+	                            <td class="tc"><input name="id[]" value="${u.USER_ID}" type="checkbox"></td>
+	                            <td>${u.USER_ID}</td>
+	                            <td>${u.USER_NAME}</td>
+	                            <td>${u.USER_SEX=='T'?"男":"女"}</td>
+	                            <td>${u.USER_EMAIL}</td>
+	                            <td>${u.USER_MOBILE}</td>
+	                            
+	                           
+	                            <td>
+	                                <a class="link-update" href="#">修改</a>
+	                                <a class="link-del" href="#">删除</a>
+	                            </td>
+	                        </tr>
+                        </c:forEach>
+                        
                     </table>
                     <div class="list-page"> 2 条 1/1 页</div>
                 </div>
