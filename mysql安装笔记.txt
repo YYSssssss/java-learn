@@ -1,0 +1,36 @@
+1. 将文件解压入到自定义的目录 下
+
+2 . 配置my.ini
+     在根目录下创建文件my.ini，并在文件中输入以下代码
+[mysqld]
+basedir ="C:\mysql-8.0.16-winx64"
+datadir ="C:\mysql-8.0.16-winx64\data"(注意如果有错误可能是斜杠的问题)
+port=3306
+server_id =10
+character-set-server=utf8
+character_set_filesystem=utf8
+[client]
+port=3306
+default-character-set=utf8
+[mysqld_safe]
+timezone="CST"
+[mysql]
+default-character-set=utf8
+
+3. 配置环境变量， 将mysql/bin加入到PATH中
+
+4. 找到cmd.exe，以管理员身份运行(确保是管理员)
+
+5. 首先将MySQL加入到Windows的服务中，输入命令：
+
+    mysqld --install;
+
+6. 开始初始化数据库，输入：
+  
+    mysqld --initialize --console   （记住初使密码）（A temporary password is generated for root@localhost: fOr7of0&p_GT）
+
+7.  输入：net start mysql，稍后你也可以用net stop mysql关闭MySQL服务。
+
+8.  然后就可以进入MySQL了，输入：mysql -u root -p，此时会要求你输入密码
+
+9. alter user user() identified by "yys";  改初使秘密
