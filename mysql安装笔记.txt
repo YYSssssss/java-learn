@@ -33,4 +33,4 @@ default-character-set=utf8
 
 8.  然后就可以进入MySQL了，输入：mysql -u root -p，此时会要求你输入密码
 
-9. alter user user() identified by "yys";  改初使秘密
+9. alter user user() identified by "yys";  改初使秘密                     
