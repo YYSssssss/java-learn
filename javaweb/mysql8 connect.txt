@@ -1,0 +1,9 @@
+在安装完MySQL的时候，我们现在一般都使用Navicat来连接数据库，可惜出现下面的错误：1251-Client does not support authentication protocol requested by server; consider upgrading MySQL client。
+
+出现上述问题的原因是：mysql8 之前的版本中加密规则是mysql_native_password,而在mysql8之后,加密规则是caching_sha2_password?把mysql用户登录密码加密规则还原成mysql_native_password
+
+登入成功后mysql > 样式中输入 
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'yys';(这里错误是因为符号问题，打一遍就好了)
+
+FLUSH PRIVILEGES;  还有一种方法，就是重新启动mysql服务器，来使新设置生效。
