@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简易计算器</title>
+	<style>
+		input {
+			width: 300px;
+			font-size: 16px;
+			line-height: 18px;
+			padding:10px;
+			border: 1px solid #ccc;
+		}
+		
+		button {
+			padding: 10px 20px;
+			border: 1px solid #ccc;
+			background: #f5f5f5;
+		}
+		.res {
+			width: 300px;
+			height: 100px;
+			padding: 10px;
+			border: 1px solid #ccc;
+		}
+	</style>
+</head>
+<body>
+	<h1>计算器</h1>
+	<hr>
+	
+	<table>
+		<tr>
+			<td>加数1：</td>
+			<td>
+				<input type="text" id="num1">
+			</td>
+		</tr>
+
+		<tr>
+			<td>加数2：</td>
+			<td>
+				<input type="number" id="num2">
+			</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td>
+				<button onclick="add()">+</button>
+			</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td>
+				<div class="res" id="box"></div>
+			</td>
+		</tr>
+	</table>
+
+	<script>
+		
+		//定义函数
+		function add() {
+			// 获取 用户在 input 中输入的内容
+			// 获取元素对象 返回对象 对象描述 id是num1的元素 
+			var inputEle1 = document.getElementById('num1');
+			var inputEle2 = document.getElementById('num2');
+
+			//获取用户在input中输入的值
+			var v1 = inputEle1.value;
+			var v2 = inputEle2.value;
+
+			//判断用户输入是否是纯数字
+			if (isNaN(v1)) {
+				alert('加数1必须是纯数字');
+				return; 
+			}
+			if (isNaN(v2)) {
+				alert('加数2必须是纯数字');
+				return;
+			}
+
+
+			//把字符串转换为数字
+			v1 = Number(v1);
+			v2 = Number(v2);
+
+			//两个数相加
+			var sum = v1 + v2;
+
+			//获取放结果的div元素 innerHTML 获取或者设置 双标签内的内容
+			var boxEle = document.getElementById('box');
+			boxEle.innerHTML = sum;
+
+		}
+	</script>
+	
+</body>
+</html>

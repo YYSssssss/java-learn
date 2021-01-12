@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>字符串</title>
+</head>
+<body>
+	<script>	
+		var username = '小丽丽';
+	
+
+		//单引号
+		//var msg01 = '我和你去钓鱼';
+		var msg01 = '我和' + username + '去钓鱼';
+		
+		//双引号
+		var msg02 = "我和" + username + "去公园";
+		
+
+		// 反引号 （ES6）
+		/*var msg03 = `
+		我和你去动物园
+		遇到了老虎
+		我打了它
+		被抓了
+		判了15年
+		`;*/
+		var msg03 = `
+		我和${username}去动物园
+		遇到了老虎
+		我打了它
+		被抓了
+		判了15年
+		`;
+
+
+		console.log(msg01)
+		console.log(msg02)
+		console.log(msg03)
+
+
+
+	</script>
+</body>
+</html>

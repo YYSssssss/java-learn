@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>同志交友</title>
+	<style>
+		input {
+			width: 300px;
+			padding: 10px;
+			font-size: 16px;
+			border: 1px solid #ccc;
+		}
+		button {
+			padding: 10px 20px;
+			border: 1px solid #ccc;
+			background: #f5f5f5;
+		}
+		#res {
+			margin-top:20px;
+			width: 300px;
+			min-height: 100px;
+			padding: 10px;
+			border:1px solid #ccc;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>同志交友</h1>
+	<hr>
+	<h3>请输入您的生日：</h3>
+	<input type="date" id="yearInput">
+	<button onclick="makeFn()">提交</button>
+
+
+	<div id="res"></div>
+
+
+	<script>
+		//声明函数
+		function makeFn() {
+			//获取用户输入的日期
+			var date = document.getElementById('yearInput').value;
+			console.log(date);
+			
+			//从日期中获取年 并且转换为Number
+			var year = Number(date.split('-')[0]);
+
+
+			//判断
+			var animal = '';
+			switch (year % 12) {
+				case 0: animal = '猴'; break;
+				case 1: animal = '鸡'; break;
+				case 2: animal = '狗'; break;
+				case 3: animal = '猪'; break;
+				case 4: animal = '鼠'; break;
+				case 5: animal = '牛'; break;
+				case 6: animal = '虎'; break;
+				case 7: animal = '兔'; break;
+				case 8: animal = '龙'; break;
+				case 9: animal = '蛇'; break;
+				case 10: animal = '马'; break;
+				case 11: animal = '羊'; break;
+				default: animal = '驴';  //前面的条件都不满足
+			}
+
+
+			//把结果显示到页面中
+			document.getElementById('res').innerHTML = '您的生肖是： '+animal;
+
+			/*
+			   year % 12 --  0 ~ 11
+				鼠   4     2008  奥运会   + 12  （2020）
+				牛   5     2009
+				虎   6     2010
+				兔   7
+				龙   8
+				蛇   9
+				马   10
+				羊   11
+				猴   0
+				鸡   1
+				狗   2
+				猪   3
+			*/
+
+		}
+
+		//console.log(2020 % 12)
+
+	</script>
+</body>
+</html>

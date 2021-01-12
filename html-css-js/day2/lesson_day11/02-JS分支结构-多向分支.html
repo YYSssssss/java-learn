@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>同志交友</title>
+	<style>
+		input {
+			width: 300px;
+			padding: 10px;
+			font-size: 16px;
+			border: 1px solid #ccc;
+		}
+		button {
+			padding: 10px 20px;
+			border: 1px solid #ccc;
+			background: #f5f5f5;
+		}
+		#res {
+			margin-top:20px;
+			width: 300px;
+			min-height: 100px;
+			padding: 10px;
+			border:1px solid #ccc;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>同志交友</h1>
+	<hr>
+	<h3>请输入您的成绩：</h3>
+	<input type="number" id="score">
+	<button onclick="makeScore()">提交</button>
+
+
+	<div id="res"></div>
+
+
+	<script>
+		//声明函数
+		function makeScore() {
+			//获取用户输入的成绩
+			var score = Number(document.getElementById('score').value);
+
+			//对成绩进行判断
+			var resContent = '';  //空字符串 声明定义 变量
+			if (score >= 90) {
+				resContent = '不错哦，小同志，很优秀'; //修改变量的值
+			} else if (score >= 80) {
+				resContent = '小同志，还行';
+			} else if (score >= 60) {
+				resContent = '小同志，及格了';
+			} else {
+				resContent = '你不是我的同志';
+			}
+
+
+			//把结果写入到div中 id=res
+			document.getElementById('res').innerHTML = resContent;
+
+		}
+
+	</script>
+</body>
+</html>

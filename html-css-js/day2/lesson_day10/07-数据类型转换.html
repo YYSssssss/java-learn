@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数据类型转换</title>
+</head>
+<body>
+	<script>
+		//自动类型转换
+		console.log(100 + '20'); //10020  数字100自动转为字符串
+		console.log(10 * '3');   //30  字符串转为了数字
+		console.log('2' / '4a');  // NaN  字符串自动转为数字，
+
+		//100会转为布尔值 true
+		if (100) {
+
+		}
+
+		//强制类型转换
+
+		console.log(Boolean('false')) //true
+		console.log(Boolean(''));  //false
+
+		console.log(Boolean(NaN)) //false
+		console.log(Boolean(null)) //false
+		console.log(Boolean(undefined)) //false
+
+		console.log('')
+
+
+		console.log(String(null))
+		console.log(Number(true))
+		console.log(Number(false))
+		console.log(Number(null))
+		console.log(Number(undefined))
+	</script>
+</body>
+</html>

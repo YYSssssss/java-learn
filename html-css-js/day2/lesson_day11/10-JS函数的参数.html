@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数的参数</title>
+</head>
+<body>
+	<h1>同志交友</h1>
+	<hr>
+
+	<script>
+		
+		//形参和实参数量
+		//定义函数
+		function demo(a, b) {
+			/*
+			ES6之间 默认值的写法  了解
+			if (b === undefined) {
+				b = '默认值'
+			}*/
+			console.log(a+' 和 '+b+' 正在一起交友');
+		}
+
+
+		demo('小丽丽', '小刚刚');
+		demo('大丽丽', '大刚刚', '大花花'); //多给的实参 会被忽略
+		demo('老丽丽');    //如果少给了实参。 有个形参没有对应的实参，该形参默认值 undefined
+		demo();
+
+		console.log('')
+
+
+		//参数默认值
+		function fn(a, b='小梅梅') {
+			console.log(`${a} 和 ${b} 一起跳舞`);
+		}
+
+		fn('小刚刚');
+		fn('小刚刚', '小丽丽');
+
+		console.log('');
+
+
+
+		//可变数量的参数
+		//声明函数 实现 所有参数累加的和
+		function sum() {
+			//arugments 只能在函数里面用
+			var s = 0;
+			
+			//遍历 arguments 取出其中的每一个值
+			for (var i = 0; i < arguments.length; i ++) {
+				s += arguments[i]
+			}
+
+			//返回
+			return s;
+
+		}
+
+		console.log(sum(1,2,3,4))
+		console.log(sum(1,2,3,4,123,123,1231231,123123123123))
+
+
+
+
+
+
+	</script>
+</body>
+</html>

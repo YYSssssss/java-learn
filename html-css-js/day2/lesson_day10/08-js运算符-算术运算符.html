@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>运算符</title>
+</head>
+<body>
+	
+	<h1>运算符</h1>
+	<hr>
+
+	<script>
+		/*
+			1 * 1 二元运算
+			+100  正号
+			-100  一元运算符
+			a += 10
+			a ++
+
+			?:   
+		*/
+
+		//算数运算符
+		/*
+		+ - * / %  ++递增 --递减
+		*/
+
+		var num = 10;
+
+		num ++; //每次递增1
+		num ++;  // 等同于 num += 1  
+		++ num; //也可以递增
+
+		console.log(num)
+
+		num --; //每次递减1   num -= 1
+		-- num;
+		console.log(num)
+
+		console.log('');
+
+
+		// 表达式   表达式通常由运算符和操作数组成。 简单表达式也有复杂表达式
+		// 表达式的特点 表达式有计算结果
+		// 有些表达式 还会产生额外的作用（对操作产生影响）
+
+
+		var a = 10;
+
+		var r = (a += 10); //表达式
+		console.log(r); //r是表达式的计算结果
+
+		console.log(a); //a+10表示，除了表达式有结果，操作数也被影响了
+
+
+
+		console.log('');
+
+
+
+		var b = 10;
+
+		//r = b ++; //表达式
+		r = ++b;
+		console.log(r); //10 b++表达式的结果是 10 | ++b 结果11
+		console.log(b); // b++ 还是 ++b 对b的影响是一样的
+
+
+		var c = 34;
+
+		console.log(c --); //表达式的结果是34，c的值变为了33
+		console.log(-- c); //32
+		console.log(c);
+
+
+		var d = 1;
+
+				// 1   -  2   +     2  -    2
+		var r = (d++) - (d--) + (++d) - (d--)
+			/*
+				1   d=2
+				2   d=1
+				2   d=2
+				2   d=1
+			*/
+
+		console.log(r); //-1
+		console.log(d); //1
+
+	</script>
+</body>
+</html>

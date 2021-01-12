@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+        }
+        td,th {
+            width: 40px;
+            height: 40px;
+            border: 1px solid;
+            text-align: center;
+        }
+        input{
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<!-- body部分 -->
+<body>
+    <table>
+        <tr>
+            <td><strong>数：</strong></td>
+            <td><input type="text" id="num1"></td>
+            <td><strong>数：</strong></td>
+            <td><input type="text" id="num2"></td>
+        </tr>
+        <tr>
+            <td><button onclick="cal(1)">+</button></td>
+            <td><button onclick="cal(2)">-</button></td>
+            <td><button onclick="cal(3)">*</button></td>
+            <td><button onclick="cal(4)">/</button></td>
+        </tr>
+        <tr>
+            <td colspan="4"><button onclick="cal(5)">clear</button></td>
+        </tr>
+        <tr>
+            <td colspan="2">输出：</td>
+            <td colspan="2" id="output"></td>
+        </tr>
+    </table>
+</body>
+<!-- script部分 -->
+<script type="text/javascript">
+    function cal(sig) {
+            var Dom_input_num1 = document.getElementById('num1').value;
+            var Dom_input_num2 = document.getElementById('num2').value; 
+            var outputElement = document.getElementById('output');
+            if (isNaN(Dom_input_num1)) {
+                alert('请输入数字');
+                return;
+            }
+            if (isNaN(Dom_input_num2)) {
+                alert('请输入数字');
+                return;
+            }
+            Dom_input_num1 = Number(Dom_input_num1);
+            Dom_input_num2 = Number(Dom_input_num2);
+            switch(sig){
+                case 1: var res =  Dom_input_num1 + Dom_input_num2;break;
+                case 2: var res =  Dom_input_num1 - Dom_input_num2;break;
+                case 3: var res =  Dom_input_num1 * Dom_input_num2;break;
+                case 4: var res =  Dom_input_num1 / Dom_input_num2;break;
+                case 5: 
+                var res = '';
+                        document.getElementById('num1').value = '';
+                        document.getElementById('num2').value = '';
+                        break;
+            }
+            outputElement.innerHTML = res;
+        }
+</script>
+</html>

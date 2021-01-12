@@ -166,3 +166,9 @@ ul.lastElementChild.innerHTML = '<h1>Hello</h1>';
 
 const btn = document.querySelector('.btn');
 btn.style.background = 'red';
+
+//
+// var d = document.createElement('style');
+// d.setAttribute('type', 'text/css');
+// d.innerHTML = 'p { color: red }';
+// document.getElementsByTagName('head')[0].appendChild(d);

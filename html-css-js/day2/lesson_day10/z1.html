@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算器</title>
+    <style>
+        input{
+            width: 300px;
+            font-size: 16px;
+            line-height: 18px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            background: #f5f5f5;
+        }
+        .res {
+            width: 300px;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>计算器</h1>
+    <hr>
+    <form action="#">
+        <table>
+            <tr>
+                <td>加数1：</td>
+                <td>
+                    <input type="text" id="num1">
+                </td>
+            </tr>
+            <tr>
+                <td>加数2：</td>
+                <td>
+                    <input type="text" id="num2">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+				    <button onclick="add()">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <div class="res" id="box"></div>
+                </td>
+            </tr>            
+        </table>
+    </form>
+</body>
+
+<script>
+    function add(){
+        var inputEle1 = document.getElementById('num1').value;
+        var inputEle2 = document.getElementById('num2').value;
+        
+        // var inputEle1 = document.getElementById('num1');
+        // var inputEle2 = document.getElementById('num2');
+
+        // var v1 = inputEle1.value;
+        // var v2 = inputEle2.value;
+        // v1 = Number(v1);
+        // v2 = Number(v2);
+        if(isNaN(inputEle1)){
+            alert('加数1必须是数字')；
+            return;
+        }
+        if (isNaN(v2)) {
+				alert('加数2必须是纯数字');
+				return;
+			}
+        inputEle1 = Number(inputEle1);
+        inputEle2 = Number(inputEle2);
+
+        // var sum = v1 + v2;
+        var sum = inputEle1 + inputEle2;
+
+        var boxEle = document.getElementById('box');
+        boxEle.innerHTML = sum;
+
+    }
+</script>
+
+</html>

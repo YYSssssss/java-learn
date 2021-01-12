@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<a href="#" id="res"></a>
+	<a href="#" id="san"></a>
+</head>
+<body>
+	<script type="text/javascript">
+		if (Number(true)!==1){
+
+			var name = 'Jq'
+			var str = `我和你
+						心连心
+						     —————${name}`
+
+			 res = prompt(str)
+			 resEle = document.getElementById('res')
+			 resEle.innerHTML = res
+			 var san = res === null?'遗憾':'太好了'
+			 sanEle = document.getElementById('san')
+			 sanEle.innerHTML = san
+		} else {
+			var i,j,k
+			console.log(i,k,j)
+			confirm('exit?')
+		}
+	</script>
+</body>
+</html>

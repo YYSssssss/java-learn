@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		table	{
+			border-collapse: collapse;
+		}
+		td,th {
+			width: 40px;
+			height: 40px;
+			border:1px solid; /* 边框样式 */
+			text-align: center;
+		}
+		input {
+			width: 40px;
+			height: 40px;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>数：</th>
+			<td><input type="text" id="num1"></td>
+			<th>数：</th>
+			<td><input type="text" id="num2"></td>
+		</tr>
+		<tr>
+			<td><button onclick="cal(1)">+</button></td>
+			<td><button onclick="cal(2)">-</button></td>
+			<td><button onclick="cal(3)">*</button></td>
+			<td><button onclick="cal(4)">/</button></td>
+		</tr>
+		<tr>
+			<td colspan="4"><button onclick="cal(5)">清除</button></td>
+		</tr>
+		<tr>
+			<td colspan="2">输出：</td>
+			<td colspan="2" id = "output"></td>
+		</tr>
+
+
+	</table>
+		<script type="text/javascript">
+			function cal(sig) {
+				var inputElement1 = document.getElementById('num1');
+				var inputElement2 = document.getElementById('num2');
+				var outputElement = document.getElementById('output');
+				var num1_str =inputElement1.value
+				var num2_str =inputElement2.value
+				if (isNaN(num1_str)) {
+					alert('请输入数字');
+					return;
+				}
+				if (isNaN(num2_str)) {
+					alert('请输入数字');
+					return;
+				}
+				num1 = Number(num1_str);
+				num2 = Number(num2_str);
+				switch(sig){
+					case 1: var res =  num1 + num2;break;
+					case 2: var res =  num1 - num2;break;
+					case 3: var res =  num1 * num2;break;
+					case 4: var res =  num1 / num2;break;
+					case 5: var res = '';
+							inputElement1.value = '';
+							inputElement2.value = '';break;
+				}
+				outputElement.innerHTML = res;
+			}
+		
+
+		</script>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 	<script type="text/javascript">
+		function add() {
+			var inputElem1 = document.getElementById('num1');
+			var inputElem2 = document.getElementById('num2');
+			var num1_str = inputElem1.value;
+			var num2_str = inputElem2.value;
+			num1 = Number(num1_str);
+			num2 = Number(num2_str);
+			var res = num1 + num2
+			var boxEle = document.getElementById('box')
+			boxEle.innerHTML = res
+		}
+		function minus() {
+			var inputElem1 = document.getElementById('num1');
+			var inputElem2 = document.getElementById('num2');
+			var num1_str = inputElem1.value;
+			var num2_str = inputElem2.value;
+			num1 = Number(num1_str);
+			num2 = Number(num2_str);
+			var res = num1 - num2
+			var boxEle = document.getElementById('box')
+			boxEle.innerHTML = res
+		}
+		function multiply() {
+			var inputElem1 = document.getElementById('num1');
+			var inputElem2 = document.getElementById('num2');
+			var num1_str = inputElem1.value;
+			var num2_str = inputElem2.value;
+			num1 = Number(num1_str);
+			num2 = Number(num2_str);
+			var res = num1 * num2
+			var boxEle = document.getElementById('box')
+			boxEle.innerHTML = res
+		}function division() {
+			var inputElem1 = document.getElementById('num1');
+			var inputElem2 = document.getElementById('num2');
+			var num1_str = inputElem1.value;
+			var num2_str = inputElem2.value;
+			num1 = Number(num1_str);
+			num2 = Number(num2_str);
+			var res = num1 / num2
+			var boxEle = document.getElementById('box')
+			boxEle.innerHTML = res
+		}
+	</script> -->

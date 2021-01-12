@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS如何定义函数</title>
+</head>
+<body>
+	<script>
+		//定义函数  多种方式
+
+		demo(); //函数提升 （特殊情况）
+		//fn(); //不存在变量提升
+
+
+		//function 关键字方式 def
+		function demo (a, b) {
+			console.log('demo');
+		}
+
+		//表达式方式 
+		var fn = function(a, b){
+			console.log('fn');
+		}
+
+		console.log('')
+		demo();
+		fn();
+
+		var a = demo;
+
+		a();
+
+		console.log(typeof demo) //函数也是一种数据类型(对象类型)
+		console.log(typeof fn)
+		console.log(typeof fn())
+
+		console.log('')
+
+		//第三种函数 定义方式 (了解)
+		var myFun = new Function('a', 'b', 'c', 'console.log("myFun")');
+
+		myFun();
+
+
+
+
+
+
+	</script>
+</body>
+</html>

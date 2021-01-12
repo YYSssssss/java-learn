@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数据类型</title>
+</head>
+<body>
+	<h1>数据类型</h1>
+	<hr>
+
+	<script>
+		//数字
+
+		var n1 = 10234;
+		var n2 = 0x12; //十六进制
+		var n3 = 2e2; //科学计数法（小学知识）
+
+		console.log(n1,n2,n3)
+
+		//浮点精度问题
+		console.log(.1 + .2);
+
+		//NaN  表示Not a number
+
+		console.log(NaN)
+		console.log(typeof(NaN))
+
+		//NaN 跟 任何值 进行任何运算 结果依然是NaN
+		console.log(NaN * 0);
+
+		//NaN跟谁都不相等
+		console.log(NaN == NaN)
+
+
+		var num = 2344e1000;
+
+		console.log(typeof(num))
+		console.log(num)
+
+
+		console.log(isNaN(NaN))
+		console.log(isNaN('hello'))
+		console.log(isNaN('123')) //字符串'123' 转为number 的时候 是 123 不是NaN
+
+	</script>
+</body>
+</html>

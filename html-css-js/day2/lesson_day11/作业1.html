@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		var str= 1
+		document.write('<table>')
+		for (var i=0;i<4+1;i++){
+			document.write('<tr>')
+
+			for(var j = 0;j < 9+1;j++){
+				if (str < 9+1){
+					str = '0'+str
+				}
+				document.write('<td>'+String(str)+'</td>')
+				str ++
+			}
+
+
+
+
+
+
+			document.write('</tr>')
+		}
+
+
+
+
+		document.write('</table>')
+
+	</script>
+</body>
+</html>

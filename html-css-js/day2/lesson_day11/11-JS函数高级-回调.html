@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS函数</title>
+</head>
+<body>
+	<script>
+		//回调函数 （高阶函数）
+		function fn(f1, f2) {
+			return f1(1)+f2(1)
+		}
+
+		function demo(n) {
+			return n * 100;
+		}
+
+		console.log(fn(Math.abs, demo))
+
+		console.log('');
+
+		//有名函数 从小到大
+		function mySort(v1,v2) {
+			/*if (v1 > v2) {
+				return 5 //换过来 只要是正数 就会交换
+			} else {
+				return -7 //不变  只要是负数 就不换
+			}*/
+
+			return v1 - v2;
+		}
+
+
+		//有些方法的参数 要求就是函数
+		var list = [10,23,1,456,8,3,5]; //数组 Array
+		console.log(list);
+		//排序 字符串排序
+		//list.sort();
+		//按照自然排序
+		//list.sort(mySort)
+		list.sort(function(v1, v2){
+			return v1 - v2;
+		})
+
+		console.log(list);
+
+
+	</script>
+</body>
+</html>
